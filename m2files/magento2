@@ -1,0 +1,10 @@
+upstream fastcgi_backend {
+     server  unix:/run/php/php7.2-fpm.sock;
+ }
+
+ server {
+     listen 80 default_server;
+     server_name m2.one;
+     set $MAGE_ROOT /var/www/html/m2.one;
+     include /var/www/html/m2.one/nginx.conf.sample;
+ }
