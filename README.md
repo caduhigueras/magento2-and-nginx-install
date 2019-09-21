@@ -1,5 +1,7 @@
 # magento2-and-nginx-install
 
+<p>This makes it really simple to setup a Nginx Environment with php7.2 and MySQL and also installs Magento 2. You will have it all setup with only one click - Have fun!</p>
+
 <p><strong>1. First go to /m2files/magento2 and change the paths to the name of the site that you will use.</strong></p>
 <p>Exs:<br>
 server_name <strong>mysitemagento2.test</strong>;<br>
@@ -35,4 +37,8 @@ sudo chmod 777 bootstrap.sh</p>
 
 <p><strong>5. Run the bootstrap.sh:</strong><br>
 ./bootstrap.sh
+</p>
+
+<p>After finishing the code, go to /etc/hosts and make sure the name you chose to the website is there like: <br>
+<strong>127.0.0.1 mysitemagento2.test</strong>  
 </p>
