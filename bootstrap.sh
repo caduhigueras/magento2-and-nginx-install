@@ -1,11 +1,11 @@
 #items necessary for magento install
 dbname=magento2 #database name to install magento 2
-dbpass=bnm196922 #user will be root
+dbpass=yourdbpassword #user will be root
 magentourl=http://m2.one #url will you put also on hosts file and use to access the website locally
 magentourlnohttp=m2.one #necessary to setup etc/hosts on nginx
 magentoadminname=admin #first name of magento admin - please use just one word
 magentoadminlastname=admin #last name of magento admin - please use just one word
-magentoadminpassword=yourpassword #pwd to login on magento 2 and on the database
+magentoadminpassword=youradminpassword #pwd to login on magento 2 and on the database
 backendfrontname=admin #path to magento's backend example: http://yourmagento2.test/admin
 adminemail=admin@admin.com #magento admin email
 adminuser=admin #magento admin user - used to login on the backend
@@ -115,6 +115,8 @@ echo "#########################################"
 sudo rm /etc/php/7.2/fpm/php.ini
 sudo cp ./m2files/php.ini /etc/php/7.2/fpm/
 sudo rm -rf php.ini
+sudo service php7.2-fpm reload
+sudo service php7.2-fpm restart
 
 # auth.json
 echo ""
