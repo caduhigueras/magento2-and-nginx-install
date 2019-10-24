@@ -135,6 +135,7 @@ echo ""
 echo "##############################################"
 echo "##### CREATING COMPOSER PROJECT MAGENTO2 #####"
 echo "##############################################"
+sudo chown -R ${SUDO_USER}:www-data /var/www/html
 cd /var/www/html
 composer create-project --repository=https://repo.magento.com/ magento/project-community-edition ${magentourlnohttp}
 
@@ -147,7 +148,7 @@ echo "###########################################"
 cd /var/www/html/${magentourlnohttp}
 sudo find var generated vendor pub/static pub/media app/etc -type f -exec chmod g+w {} +
 sudo find var generated vendor pub/static pub/media app/etc -type d -exec chmod g+ws {} +
-sudo chown -R :www-data . # Ubuntu
+sudo chown -R ${SUDO_USER}:www-data . # Ubuntu
 #sudo chmod u+x bin/magento
 
 # install Magento 2 project
