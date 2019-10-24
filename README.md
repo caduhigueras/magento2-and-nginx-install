@@ -11,7 +11,7 @@ include /var/www/html/<strong>mysitemagento2.test</strong>/nginx.conf.sample;</p
 <p><strong>2. Go to the bootstrap.sh and define the setup infos as you want:</strong><br>
 (just remember to use for magentourl and magentourlnohttp the same name you chose on step 1)<br>
 dbname=magento2 <br>
-dbpass=bnm196922<br>
+dbpass=yourpasswordhere<br>
 magentourl=http://<strong>mysitemagento2.test</strong><br>
 magentourlnohttp=<strong>mysitemagento2.test</strong> <br>
 magentoadminname=admin <br>
