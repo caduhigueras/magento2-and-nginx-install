@@ -113,8 +113,10 @@ echo "#########################################"
 echo "##### CHANGING PHP.INI FOR MAGENTO 2#####"
 echo "#########################################"
 sudo rm /etc/php/7.2/fpm/php.ini
+sudo rm /etc/php/7.2/cli/php.ini
 sudo cp ./m2files/php.ini /etc/php/7.2/fpm/
-sudo rm -rf php.ini
+sudo cp ./m2files/php2.ini /etc/php/cli/php.ini
+#sudo rm -rf php.ini
 sudo service php7.2-fpm reload
 sudo service php7.2-fpm restart
 
@@ -134,7 +136,7 @@ echo "##############################################"
 echo "##### CREATING COMPOSER PROJECT MAGENTO2 #####"
 echo "##############################################"
 cd /var/www/html
-sudo composer create-project --repository=https://repo.magento.com/ magento/project-community-edition ${magentourlnohttp}
+composer create-project --repository=https://repo.magento.com/ magento/project-community-edition ${magentourlnohttp}
 
 # PERMISSIONS Magento 2
 echo ""
