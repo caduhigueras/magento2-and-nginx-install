@@ -84,7 +84,7 @@ echo "#########################################"
 
 sudo cp ./m2files/magento2  /etc/nginx/sites-available/${magentourlnohttp}
 
-sudo bash -c 'echo "127.0.0.1  ${magentourlnohttp}" >> /etc/hosts'
+sudo bash -c "echo '127.0.0.1 $magentourlnohttp' >> /etc/hosts"
 
 sudo rm /etc/nginx/sites-available/default
 sudo rm /etc/nginx/sites-enabled/default
