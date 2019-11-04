@@ -59,12 +59,12 @@ echo ""
 echo "###########################################"
 echo "##### INSTALLING PHP and Dependencies #####"
 echo "###########################################"
-sudo sudo apt-get -y install php7.2-fpm php7.2-gd php7.2-mysql php7.2-curl php7.2-soap php7.2-xml php-xdebug
+sudo apt-get -y install php7.2-fpm php7.2-gd php7.2-mysql php7.2-curl php7.2-soap php7.2-xml php-xdebug
 sudo apt-get -y install php-pear
 sudo apt-get -y install php-oauth php7.2-intl php7.2-mbstring php7.2-zip openssl php7.2-bcmath
 sudo apt-get -y install zip unzip
-sudo apt install -y curl
-sudo apt install -y git
+sudo apt -y install curl
+sudo apt -y install git
 
 # variables for mysql
 echo ""
@@ -73,7 +73,7 @@ echo "###########################################"
 echo "##### CREATING DATABASE #####"
 echo "###########################################"
 
-mysql -u root -p$dbpass -e "CREATE DATABASE IF NOT EXISTS $dbname;"
+sudo mysql -u root -p$dbpass -e "CREATE DATABASE IF NOT EXISTS $dbname;"
 
 ## nginx conf file
 echo ""
